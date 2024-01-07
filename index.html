@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello adiba</title>
+    <style>
+        .container{
+            padding:20px;
+            margin-left: 140px;
+            margin-right: 140px;
+
+        }
+        .searchresult{
+          border-radius: 5px;
+          margin-bottom: 40px;
+          text-align: justify;
+          text-justify: inter-word;
+          font-size:20px;
+          font-weight:bold;
+
+        }
+
+        .search_input{
+            display:flex;
+            align-items: center;
+            width: 600px;
+              padding: 12px 20px;
+              margin: 8px 0;
+              display: inline-block;
+              border: 1px solid #ccc;
+              border-radius: 25px;
+              box-sizing: border-box;
+              margin-left:50px;
+        }
+        .search_input input{
+        border:none;
+        flex:1;
+        width:80%;
+        height: 20px;
+        outline: none;
+        padding:2px;
+        }
+        input[type=submit] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 25px;
+          cursor: pointer;
+          font-size:15px
+        }
+
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+
+        ::placeholder {
+            color: black;
+            font-size: 15px;
+        }
+
+        input[type=text]{
+        text-size:25px;
+        }
+
+        .top-container{
+        padding: 30px;
+        box-shadow: 5px 5px 5px 5px #EEEDE7;
+        }
+
+        .searchInputs{
+            display: flex;
+            justify-content:space-start;
+            align-items:center;
+            }
+        a{
+        font-size: 30px;
+        }
+        .wrapper{
+        height:125px;
+        overflow:hidden;
+        margin-bottom:20px;
+        padding:2px;
+
+        }
+        .except_div{
+        font-size:30px;
+        margin-left:150px;
+        font-weight:bold;
+        margin-top:-40px;
+        }
+        .show_word{
+        font-size:20px;
+        font-style:italic;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <div class="top-container">
+    <div class="searchInputs">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtIcUVPAg3-QU2ptdXHNQ96Kxv0qKmIs1GSw&usqp=CAU" alt="W3Schools.com" class="center" style="width:70px;height:71px;">
+
+        <form action="#" method="post">
+            <div class="search_input">
+                <i class="fa fa-fw fa-search"></i>
+                <input type="text" placeholder="আপনার প্রশ্ন বা জিজ্ঞাসাটি লিখুন" name="keyword"/>
+            </div>
+            <input type="submit" value="অনুসন্ধান করুন"/>
+
+        </form>
+    </div>
+    </div>
+    <div class="container">
+        <p class="show_word">{{a}}</p>
+    {% for i in pass_list %}
+        <a href="{{i[0]}}">{{i[0]}}</a>
+        <div class="wrapper">
+            <p class="searchresult">{{i[1]}}</p>
+
+        </div>
+    {% endfor %}
+    </div>
+
+</div>
+
+
+</body>
+</html>
